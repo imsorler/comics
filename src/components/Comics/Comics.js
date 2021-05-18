@@ -9,7 +9,7 @@ import {
 import { getdDatApi } from '../../utils/getDataApi'
 import { ROOT_INDEX } from '../../constants/root'
 
-import './Comics.css'
+import styles from './Comics.css'
 
 class Comics {
   
@@ -25,16 +25,16 @@ class Comics {
         const uri = API_URL + URL_COMIX + '/' + id + '/' + URL_CHARACTERS
 
         htmlContent += `
-        <li class="comics__item" data-uri="${uri}">
-          <span class="comics__name">${title}</span>
-          <img class="comics_img" src="${IMG_SRC}">
+        <li class="comics__item ${styles.comics__item}" data-uri="${uri}">
+          <span class="${styles.comics__name}">${title}</span>
+          <img class="img-contain ${styles.comics_img}" src="${IMG_SRC}">
         </li>
       `
       }
     })
 
     const htmlWrapper = `
-      <ul class="comics__container">
+      <ul class="${styles.comics__container}">
         ${htmlContent}
       </ul>
     `
