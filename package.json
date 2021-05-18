@@ -1,0 +1,17 @@
+{
+  "name": "comix",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel public/index.html --open",
+    "build": "parcel build public/index.html"
+  },
+  "author": "Eugene Shevchenko <imsorler@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
