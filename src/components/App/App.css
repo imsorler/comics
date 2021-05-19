@@ -8,6 +8,8 @@
   --spacing-small: 10px;
   --spacing-medium: 15px;
   --spacing-large: 20px;
+
+  --box-shadow: 0 2px 24px rgba(168, 175, 195, 0.5)
 }
 
 *, ::after, ::before {
@@ -59,4 +61,10 @@ body {
   display: block;
   object-fit: cover;
   object-position: center;
+}
+
+:global(.bg-contain) {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
