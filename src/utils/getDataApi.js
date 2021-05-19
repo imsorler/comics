@@ -21,4 +21,4 @@ class GetDataApi {
   }
 }
 
-export const getdDatApi = new GetDataApi()
+export const getDataApi = new GetDataApi()

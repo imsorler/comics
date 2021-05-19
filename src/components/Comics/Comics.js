@@ -6,9 +6,11 @@ import {
     URL_CHARACTERS
   } from '../../constants/api'
 
-import { getdDatApi } from '../../utils/getDataApi'
+import { getDataApi } from '../../utils/getDataApi'
 import { ROOT_INDEX } from '../../constants/root'
+
 import Error from '../Error'
+import Characters from '../Characters'
 
 import styles from './Comics.css'
 
@@ -42,7 +44,7 @@ class Comics {
   }
   
   async render() {
-    const data = await getdDatApi.getData(API_URL + URL_COMIX)
+    const data = await getDataApi.getData(API_URL + URL_COMIX)
 
     data ? this.renderComics(data) : Error.render()
   }
@@ -53,7 +55,7 @@ class Comics {
 
       element.addEventListener('click', () => {
         //получаю url на который нужно отправлять запрос
-        console.log(uri)
+        Characters.render(uri)
       })
     })
   }
