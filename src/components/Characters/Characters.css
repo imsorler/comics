@@ -37,6 +37,10 @@
   background-color: var(--color-white);
 }
 
+.characters__item:hover {
+ border: 5px solid var(--color-purple); 
+}
+
 .characters__img {
   width: 100%;
 }
